@@ -1,6 +1,6 @@
 # FFmpeg/FFprobe for AWS Lambda
 
-A Lambda layer containing a static version of FFmpeg/FFprobe utilities from the [`FFmpeg`](https://www.ffmpeg.org/) Linux package, compatible with Amazon Linux 2.x and Amazon Linux 1.x instances (including the `nodejs10.x` runtime, and the updated 2018.03 Amazon Linux 1 runtimes). 
+A Lambda layer containing a static version of FFmpeg/FFprobe utilities from the [`FFmpeg`](https://www.ffmpeg.org/) Linux package, compatible with Amazon Linux 2.x with AMD64 arch. 
 
 ## Usage
 
@@ -19,7 +19,7 @@ For manual deployments and custom builds, read below...
 
 ## Deploying to AWS as a layer
 
-This package includes FFmpeg 4.1.3, packaged by John Van Sickle. Please consider supporting him for maintaining statically built FFmpeg packages. For more information, check out <https://johnvansickle.com/ffmpeg/>
+This package includes FFmpeg 7.0.2, packaged by John Van Sickle. Please consider supporting him for maintaining statically built FFmpeg packages. For more information, check out <https://johnvansickle.com/ffmpeg/>
 
 The output will be in the `result` dir.
 
