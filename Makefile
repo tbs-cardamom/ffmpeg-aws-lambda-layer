@@ -8,6 +8,7 @@ build/layer/bin/ffmpeg:
 	rm -rf build/ffmpeg*
 	cd build && curl https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar x
 	mv build/ffmpeg*/ffmpeg build/ffmpeg*/ffprobe build/layer/bin
+	cd build/layer && zip -r ffmpeg.zip bin
 
 build/output.yaml: template.yaml build/layer/bin/ffmpeg
 	aws cloudformation package --template $< --s3-bucket $(DEPLOYMENT_BUCKET) --output-template-file $@
